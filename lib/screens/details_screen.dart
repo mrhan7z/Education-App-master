@@ -14,7 +14,6 @@ class DetailsScreen extends StatefulWidget {
     Key? key,
     required this.title,
   }) : super(key: key);
-
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
 }
