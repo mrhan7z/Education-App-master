@@ -2,7 +2,7 @@ import 'package:education_app/constants/color.dart';
 import 'package:education_app/constants/size.dart';
 import 'package:education_app/models/category.dart';
 import 'package:education_app/screens/course_screen.dart';
-import 'package:education_app/screens/details_screen.dart';
+// import 'package:education_app/screens/details_screen.dart';
 import 'package:education_app/widgets/circle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,20 +13,23 @@ class FeaturedScreen extends StatefulWidget {
   const FeaturedScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _FeaturedScreenState createState() => _FeaturedScreenState();
 }
 
 class _FeaturedScreenState extends State<FeaturedScreen> {
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
+    return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        body: Column(
-          children: const [
-            AppBar(),
-            Body(),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              AppBar(),
+              Body(),
+            ],
+          ),
         ),
       ),
     );

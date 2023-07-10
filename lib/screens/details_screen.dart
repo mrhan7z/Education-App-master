@@ -4,7 +4,7 @@ import 'package:education_app/models/lesson.dart';
 import 'package:education_app/widgets/custom_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:video_player/video_player.dart';
+// import 'package:video_player/video_player.dart';
 
 import '../widgets/lesson_card.dart';
 
@@ -15,6 +15,7 @@ class DetailsScreen extends StatefulWidget {
     required this.title,
   }) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _DetailsScreenState createState() => _DetailsScreenState();
 }
 
@@ -51,10 +52,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back),
                           height: 35,
                           width: 35,
                           onTap: () => Navigator.pop(context),
+                          child: const Icon(Icons.arrow_back),
                         ),
                       ),
                     ],
